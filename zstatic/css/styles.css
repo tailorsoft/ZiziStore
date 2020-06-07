@@ -8801,3 +8801,8 @@ Go Top CSS
 .vueperslides__parallax-wrapper {
 	padding-bottom: 100% !important;
 }
+
+.toast {
+	position: absolute;
+	top: 100px;
+}

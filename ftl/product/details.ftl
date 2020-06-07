@@ -72,8 +72,6 @@ variants : {
 </#list>
 
 
-
-
     <div class="col-lg-6 col-md-6">
         <form class="product-details-content" name="cart-form" method="post" action="/store/product/addToCart">
             <h3>${product.productName}</h3>
@@ -144,14 +142,6 @@ variants : {
             <input type="hidden" name="quantity" value="0" />
         </form>
     </div>
-    <div class="toast">
-  <div class="toast-header">
-    Toast Header
-  </div>
-  <div class="toast-body">
-    Some text inside the toast body
-  </div>
-</div>
 
 <script>
     var productId = '${product.productId}';
@@ -268,14 +258,14 @@ variants : {
                 $('input[name="productId"]').val(variant.productId);
                 updateCartButtons(variant.productId);
             } else {
-                $('.toast').html("No product in stock for "+$(this).data("size"))
+                $('.toast .toast-body').html("No product in stock for "+$(this).data("size"))
                 $('.toast').toast('show');
             }
         });
 
         $(".plus-btn").click(function() {
             if(quantity > 9){
-                $('.toast').html("Can't add more than 10")
+                $('.toast .toast-body').html("Can't add more than 10")
                 $('.toast').toast('show');
             } else {
                 quantity++
@@ -285,7 +275,7 @@ variants : {
 
         $(".minus-btn").click(function() {
             if(quantity < 1){
-                $('.toast').html("Can't add more than 10")
+                $('.toast .toast-body').html("Can't add more than 10")
                 $('.toast').toast('show');
             } else {
                 quantity--
@@ -296,10 +286,13 @@ variants : {
         $("form[name='cart-form']").submit(function(e){
             var productId = $('input[name="productId"]').val();
             if (!productId || productId == "") {
-                $('.toast').html("Please select a size")
+                $('.toast .toast-body').html("Please select a size")
                 $('.toast').toast('show');
                 return false;
             }
+
+            $('.toast .toast-body').html("Cart has been updated!")
+            $('.toast').toast('show');
         })
 
         
