@@ -1,0 +1,4 @@
+<addons default="ZiziStore">
+    <!-- Private Components -->
+    <component name="ZiziStore" group="tailorsoft" version="" branch="master" repository="github-ssh"/>
+</addons>
