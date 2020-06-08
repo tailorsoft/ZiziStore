@@ -22,21 +22,21 @@ along with this software (see the LICENSE.md file). If not, see
             wikiSpaceId="ZIZISTORE" defaultLocale="en_US" defaultCurrencyUomId="USD" taxGatewayConfigId="LOCAL" requireInventory="Y" />
 
     <!-- default value for localhost development, assuming the domain localzizi.com is added to your hosts file for 127.0.0.1 -->
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstHostname" settingValue="localzizi.com" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstHostname" settingValue="localzizi.com" />
 
     <!-- settings for the product pages -->
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerRoot" settingValue="component://ZiziStore/ftl/root.ftl" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerHome" settingValue="component://ZiziStore/ftl/home.ftl" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerHeader" settingValue="component://ZiziStore/ftl/frame/header.ftl" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerFooter" settingValue="component://ZiziStore/ftl/frame/footer.ftl" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerCategory" settingValue="component://ZiziStore/ftl/category/products.ftl" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerProduct" settingValue="component://ZiziStore/ftl/product/page.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerRoot" settingValue="component://ZiziStore/ftl/root.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerHome" settingValue="component://ZiziStore/ftl/home.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerHeader" settingValue="component://ZiziStore/ftl/frame/header.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerFooter" settingValue="component://ZiziStore/ftl/frame/footer.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerCategory" settingValue="component://ZiziStore/ftl/category/products.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerProduct" settingValue="component://ZiziStore/ftl/product/page.ftl" />
 
     <!-- settings for account/login/checkout -->
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateServerSpa" settingValue="component://ZiziStore/ftl/spa/root.ftl" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateClientFooter" settingValue="/zstatic/checkout/blank.html" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateClientHeader" settingValue="/zstatic/checkout/blank.html" />
-    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" settingTypeEnumId="PsstTemplateClientCheckoutHeader" settingValue="/zstatic/checkout/blank.html" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateServerSpa" settingValue="component://ZiziStore/ftl/spa/root.ftl" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateClientFooter" settingValue="/zstatic/checkout/blank.html" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateClientHeader" settingValue="/zstatic/checkout/blank.html" />
+    <mantle.product.store.ProductStoreSetting productStoreId="ZIZISTORE" fromDate="0" settingTypeEnumId="PsstTemplateClientCheckoutHeader" settingValue="/zstatic/checkout/blank.html" />
 
 
     <moqui.basic.Enumeration description="Item Number" enumId="PidtItemNumber"  enumTypeId="ProductIdentificationType"/>
