@@ -4,7 +4,7 @@
             <div class="container">
                 <ul>
                     <li><a href="/store/">Home</a></li>
-                    <li>${category.categoryName}</li>
+                    <li>${categoryName}</li>
                 </ul>
             </div>
         </div>
