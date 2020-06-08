@@ -1,9 +1,7 @@
 <#assign cartQuantity = 0 >
-<#assign cart = [] >
-<#if productsInCart?? &amp;&amp; productsInCart.orderItemList??>
-    <#list productsInCart.orderItemList as orderItem>
+<#if cart?? &amp;&amp; cart.orderItemList??>
+    <#list cart.orderItemList as orderItem>
         <#assign cartQuantity = cartQuantity + orderItem.quantity>
-        <#assign cart = cart + [orderItem] >
     </#list>
 </#if>
 <!-- Modal -->
@@ -19,26 +17,23 @@
             <h3>My Cart (${cartQuantity})</h3>
 
             <div class="product-cart-content">
-                <#list cart as orderItem>
-                    <#assign content = productsInCart.orderItemContent[orderItem.productId] >
+                <#list cart.orderItemList as orderItem>
+                    <#assign content = productsInCart.cartItemsImage[orderItem.productId] >
+                    <div class="product-cart">
+                        <div class="product-image">
+                            <img class="d-block w-100" src="/store/content/productImage/${content.productContentId}" >
+                        </div>
 
-
-
-                <div class="product-cart">
-                    <div class="product-image">
-                        <img class="d-block w-100" src="/store/content/productImage/${content.productContentId}" >
-                    </div>
-
-                    <div class="product-content">
-                        <h3><a href="#">${orderItem.itemDescription}</a></h3>
-                        <#if orderItem.comments?? ><span>${orderItem.comments}</span></#if>
-                        <div class="product-price">
-                            <span>${orderItem.quantity}</span>
-                            <span>x</span>
-                            <span class="price">${orderItem.unitAmount}</span>
+                        <div class="product-content">
+                            <h3><a href="#">${orderItem.itemDescription}</a></h3>
+                            <#if orderItem.comments?? ><span>${orderItem.comments}</span></#if>
+                            <div class="product-price">
+                                <span>${orderItem.quantity}</span>
+                                <span>x</span>
+                                <span class="price">${orderItem.unitAmount}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </#list>
             </div>
 
