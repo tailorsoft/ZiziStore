@@ -9,7 +9,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal""><span aria-hidden="true">&times;</span></button>
-        <#if cart?size != 0>
+        <#if cartQuantity gt 0>
         <div 
             class="modal-body"
             v-if="cart.length > 0"
@@ -48,12 +48,12 @@
             </div>
         </div>
         </#if>
-        <#if cart?size == 0>
+        <#if cartQuantity == 0>
         <div class="modal-body" v-else>
             <h3>Empty!</h3>
             <div @click="closeSidebarPanel" class="product-cart-btn">
-                <nuxt-link to="/products" class="btn btn-primary">Browse All Time Hot!</nuxt-link>
-                <nuxt-link to="/products" class="btn btn-light">Browse Latest!</nuxt-link>
+                <a href="/store/category/all" class="btn btn-primary">Browse All Time Hot!</a>
+                <a href="/store/category/new" class="btn btn-light">Browse Latest!</a>
             </div>
         </div>
         </#if>

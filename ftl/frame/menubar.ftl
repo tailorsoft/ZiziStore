@@ -21,7 +21,14 @@
                             <ul class="navbar-nav">
                                 
                                 <li class="nav-item p-relative"><a href="/store/" class="nav-link">Home </a></li>
-                                <li class="nav-item p-relative"><a href="/store/category/all" class="nav-link">Shop </a></li>
+                                <li class="nav-item p-relative"><a href="/store/category/all" class="nav-link">Shop <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <#list browseRootCategoryInfo.subCategoryList as category>
+                                            <li class="nav-item"><a href="/store/category/${category.pseudoId}" class="nav-link">${category.categoryName}</a></li>
+                                        </#list>
+                                    </ul>
+                                </li>
+
                                 <li class="nav-item"><a href="/store/content/gallery" class="nav-link">Gallery</a></li>
 
                                 <#if blogResp?? &amp;&amp; blogResp.childPageInfoList??>
