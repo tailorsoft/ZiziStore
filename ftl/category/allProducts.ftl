@@ -45,7 +45,7 @@
                 <#assign imageContentId = imageInfo.productContentId!"-"/>
                 <#assign listPrice = product.listPrice!0/>
                 <#assign price = product.price!0/>
-                <@productlisting product.productId product.productName imageContentId price listPrice  />
+                <@productlisting category.pseudoId product.productId product.productName imageContentId price listPrice  />
             </div>
         </#list>
     </div>
@@ -53,15 +53,15 @@
     <nav class="products-pagination">
         <ul>
             <#if productListPageIndex gt 0>
-                <li><a href="/store/category/${pseudoId}/${productListPageIndex-1}" class="prev page-numbers"><i class="fas fa-chevron-left"></i></a></li>
+                <li><a href="/store/category/${category.pseudoId}/?page=${productListPageIndex-1}" class="prev page-numbers"><i class="fas fa-chevron-left"></i></a></li>
             </#if>
             <#list 0..productListPageCount-1 as page>
                 <#assign currentClass = ''/>
                 <#if page == productListPageIndex><#assign currentClass = 'current'/></#if>
-                <li><a href="/store/category/${pseudoId}/${page}" class="page-numbers ${currentClass}">${page+1}</a></li>
+                <li><a href="/store/category/${category.pseudoId}/?page=${page}" class="page-numbers ${currentClass}">${page+1}</a></li>
             </#list>
             <#if productListPageIndex lt productListPageCount-1>
-                <li><a href="/store/category/${pseudoId}/${productListPageIndex+1}" class="next page-numbers"><i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="/store/category/${category.pseudoId}/?page=${productListPageIndex+1}" class="next page-numbers"><i class="fas fa-chevron-right"></i></a></li>
             </#if>
         </ul>
     </nav>

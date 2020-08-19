@@ -13,9 +13,10 @@
             <div class="row">
                 <#list crossSells.products as assoc >
                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <#assign categoryId = browseRootCategory.pseudoId />
                         <#assign imgLarge = assoc.content?filter(x -> x.productContentTypeEnumId == "PcntImageLarge")?first />
     
-                        <@productlisting assoc.product.toProductId assoc.product.productName imgLarge.productContentId assoc.prices.price assoc.prices.listPrice  />
+                        <@productlisting categoryId assoc.product.toProductId assoc.product.productName imgLarge.productContentId assoc.prices.price assoc.prices.listPrice  />
                     </div>
                 </#list>
             </div>

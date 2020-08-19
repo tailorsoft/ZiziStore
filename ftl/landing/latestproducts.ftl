@@ -15,11 +15,12 @@
                 <div class="row">
                     <#list products.productList as product>
                         <div class="col-lg-3 col-md-6 col-sm-6">
+                            <#assign categoryId = browseRootCategory.pseudoId />
                             <#assign imageInfo = product.imageInfo!{}/>
                             <#assign imageContentId = imageInfo.productContentId!"-"/>
                             <#assign listPrice = product.listPrice!0/>
                             <#assign price = product.price!0/>
-                            <@productlisting product.productId product.productName imageContentId price listPrice  />
+                            <@productlisting categoryId product.productId product.productName imageContentId price listPrice  />
                         </div>
                     </#list>
                 </div>

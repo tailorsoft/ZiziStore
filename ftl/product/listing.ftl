@@ -1,9 +1,9 @@
-<#macro productlisting productId productName imageContentId price listPrice  >
+<#macro productlisting categoryId productId productName imageContentId price listPrice  >
     <div 
         :class="className">
         <div class="single-product-box">
             <div class="product-image">
-                <a href="/store/product/${productId}">
+                <a href="/store/category/${categoryId}/${productId}">
                     <#if imageContentId ??>
                         <img class="figure-img img-fluid product-img product-small-img"
                             src="/store/content/productImage/${imageContentId}"
@@ -49,7 +49,7 @@
 
             <div class="product-content">
                 <h3>
-                    <a href="/store/product/${productId}">${productName}</a>
+                    <a href="/store/category/${categoryId}/${productId}">${productName}</a>
                 </h3>
 
                 <div class="product-price">

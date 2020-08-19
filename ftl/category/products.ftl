@@ -4,7 +4,8 @@
             <div class="container">
                 <ul>
                     <li><a href="/store/">Home</a></li>
-                    <li>${categoryName}</li>
+                    <li><a href="/store/category/all">Store</a></li>
+                    <li>${category.categoryName}</li>
                 </ul>
             </div>
         </div>
