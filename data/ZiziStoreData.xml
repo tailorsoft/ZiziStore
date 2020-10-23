@@ -14,11 +14,41 @@ along with this software (see the LICENSE.md file). If not, see
 -->
 <entity-facade-xml type="seed">
 
+    <mantle.party.Party partyId="ORG_ZIZI_RETAIL" pseudoId="ZIRET" partyTypeEnumId="PtyOrganization" ownerPartyId="ORG_ZIZI_RETAIL">
+        <organization organizationName="Ziziwork Retail &amp; Wholesale"/>
+        <roles roleTypeId="OrgInternal"/>
+
+
+        <mantle.party.contact.ContactMech contactMechId="ORG_ZIZI_RTL_PA" contactMechTypeEnumId="CmtPostalAddress">
+            <mantle.party.contact.PostalAddress toName="Ziziwork Retail &amp; Wholesale"
+                    address1="51 W. Center St." address2="" unitNumber="2345"
+                    city="Orem" stateProvinceGeoId="USA_UT" countryGeoId="USA" postalCode="84057" postalCodeExt="4605"/>
+            <mantle.party.contact.PartyContactMech contactMechPurposeId="PostalBilling" fromDate="1265184000000"/>
+        </mantle.party.contact.ContactMech>
+    </mantle.party.Party>
+
+    <!-- Ziziwork Retail Warehouse Facility -->
+    <mantle.facility.Facility facilityId="ZIRET_WH" facilityTypeEnumId="FcTpWarehouse" assetAllowIssueOverQoh="Y"
+            ownerPartyId="ORG_ZIZI_RETAIL" facilityName="Ziziwork Retail Warehouse">
+
+        <locations locationTypeEnumId="FltPick" locationSeqId="01010101" sequenceNum="1" areaId="01" aisleId="01" sectionId="01" levelId="01" positionId=""/>
+        <locations locationTypeEnumId="FltPick" locationSeqId="01010201" sequenceNum="2" areaId="01" aisleId="01" sectionId="02" levelId="01" positionId=""/>
+        <locations locationTypeEnumId="FltPick" locationSeqId="01010301" sequenceNum="3" areaId="01" aisleId="01" sectionId="03" levelId="01" positionId=""/>
+        <locations locationTypeEnumId="FltPick" locationSeqId="01010401" sequenceNum="4" areaId="01" aisleId="01" sectionId="04" levelId="01" positionId=""/>
+
+        <locations locationTypeEnumId="FltBulk" locationSeqId="01010102" sequenceNum="59" areaId="01" aisleId="01" sectionId="01" levelId="02" positionId=""/>
+        <locations locationTypeEnumId="FltBulk" locationSeqId="01010202" sequenceNum="58" areaId="01" aisleId="01" sectionId="02" levelId="02" positionId=""/>
+        <locations locationTypeEnumId="FltBulk" locationSeqId="01010302" sequenceNum="57" areaId="01" aisleId="01" sectionId="03" levelId="02" positionId=""/>
+        <locations locationTypeEnumId="FltBulk" locationSeqId="01010402" sequenceNum="56" areaId="01" aisleId="01" sectionId="04" levelId="02" positionId=""/>
+
+        <locations locationTypeEnumId="FltReceiving" locationSeqId="0801" sequenceNum="80" areaId="08" aisleId="01" sectionId="" levelId="" positionId=""/>
+    </mantle.facility.Facility>
+
     <moqui.resource.wiki.WikiSpace wikiSpaceId="ZIZISTORE" description="Zizi Store Wiki Space" restrictView="N"
             rootPageLocation="dbresource://WikiSpace/ZIZISTORE.md" decoratorScreenLocation=""/>
 
 	<mantle.product.store.ProductStore productStoreId="ZIZISTORE" storeName="Zizistore"
-            organizationPartyId="ORG_ZIZI_RETAIL" inventoryFacilityId="ZIRET_WH" reservationOrderEnumId="AsResOrdFifoRec"
+            organizationPartyId="107446" inventoryFacilityId="ZIRET_WH" reservationOrderEnumId="AsResOrdFifoRec"
             wikiSpaceId="ZIZISTORE" defaultLocale="en_US" defaultCurrencyUomId="USD" taxGatewayConfigId="LOCAL" requireInventory="Y" />
 
     <!-- default value for localhost development, assuming the domain localzizi.com is added to your hosts file for 127.0.0.1 -->
