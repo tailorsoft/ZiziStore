@@ -48,7 +48,7 @@ along with this software (see the LICENSE.md file). If not, see
             rootPageLocation="dbresource://WikiSpace/ZIZISTORE.md" decoratorScreenLocation=""/>
 
 	<mantle.product.store.ProductStore productStoreId="ZIZISTORE" storeName="Zizistore"
-            organizationPartyId="107446" inventoryFacilityId="ZIRET_WH" reservationOrderEnumId="AsResOrdFifoRec"
+            organizationPartyId="_NA_" inventoryFacilityId="ZIRET_WH" reservationOrderEnumId="AsResOrdFifoRec"
             wikiSpaceId="ZIZISTORE" defaultLocale="en_US" defaultCurrencyUomId="USD" taxGatewayConfigId="LOCAL" requireInventory="Y" />
 
     <!-- default value for localhost development, assuming the domain localzizi.com is added to your hosts file for 127.0.0.1 -->
