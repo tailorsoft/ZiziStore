@@ -20,7 +20,7 @@
                             <#assign imageContentId = imageInfo.productContentId!"-"/>
                             <#assign listPrice = product.listPrice!0/>
                             <#assign price = product.price!0/>
-                            <@productlisting categoryId product.productId product.productName imageContentId price listPrice  />
+                            <@productlisting categoryId product.pseudoId product.productName imageContentId price listPrice  />
                         </div>
                     </#list>
                 </div>
